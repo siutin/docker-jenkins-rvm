@@ -10,6 +10,7 @@ RUN apt-get upgrade -y
 RUN apt-get install curl -y
 RUN apt-get install debian-keyring -y
 RUN apt-get install sudo -y
+RUN apt-get install libmysqlclient-dev -y
 
 # Setup User
 RUN useradd --home /home/worker -M worker -K UID_MIN=10000 -K GID_MIN=10000 -s /bin/bash
